@@ -1,8 +1,11 @@
 import { usuarioModel } from '../model/usuarios.model.js';
-import generateId from "../../../auth/generateId.js";
 import { getToken } from '../../../auth/jwt.js';
 
-
+const generateId = () => {
+  const random = Math.random().toString(32).substring(2);
+  const fecha = Date.now().toString(32);
+  return random + fecha;
+}
 
 export const createUsuario = async ( req, res ) => {
     const { username } = req.body;
