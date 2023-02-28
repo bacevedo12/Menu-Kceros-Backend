@@ -16,6 +16,11 @@ startConnection()
 // Se configura un middleware para aceptar requests de tipo JSON
 app.use( express.json() )
 
+// const whitelist = [
+//     "",
+// ]
+
+
 app.use(cors());
 
 //para poder cargr archivos
