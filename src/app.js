@@ -23,6 +23,10 @@ app.use( express.json() )
 
 app.use(cors());
 
+app.use(bodyParser.urlencoded({limit: '30mb', extended: true}));
+
+
+
 //para poder cargr archivos
 app.use(fileUpload({
     useTempFiles : true,
